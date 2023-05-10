@@ -86,13 +86,21 @@ const swiper4 = new Swiper('.swiper-reviews', {
   slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  grabCursor: true,
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: ["-120%", 0, -500],
+    },
+    next: {
+      shadow: true,
+      translate: ["120%", 0, -500],
+    },
   },
   breakpoints: {
     576: {
