@@ -25,6 +25,12 @@ $bp-sm: 575.98px;
 :root {
     --h-height: 130px;
     --f-height: 300px;
+    @media (max-width: $bp-xxl) {
+        --h-height: 110px;
+    }
+    @media (max-width: $bp-xl) {
+        --h-height: 100px;
+    }
     @media (max-width: $bp-lg) {
         --h-height: 70px;
         --f-height: 250px;
@@ -549,9 +555,8 @@ header {
     @include flex(column, center, center, nowrap);
     nav {
         ul {
-            @media (max-width: $bp-lg) {
-                flex-direction: column;
-            }
+            @include list();
+            @include flex();
             li {
                 &:not(:first-child){
                     margin-left: 2.25em;
@@ -1448,7 +1453,7 @@ footer {
     }
     &-body {padding: 1em;}
 }
-.btn-close {
+.close {
     background: none;
     position: absolute;
     top: .5em;
@@ -1461,37 +1466,80 @@ footer {
     opacity: 1;
     transition: $transition;
     &:hover, &:focus, &:active {
-        color: $color-1;
+        color: $color-5;
     }
 }
 
 .offcanvas {
-    &-top {height: fit-content !important;}
-    // &-end {
-    //     @media (max-width: $bp-lg) {
-    //         nav {
-    //             position: relative;
-    //             z-index: 1;
-    //             font-size: 1.5em;
-    //             ul {
-    //                 flex-direction: column;
-    //                 li {
-    //                     &:not(:first-child) {
-    //                         margin-left: 0px;
-    //                     }
-    //                     a {
-    //                         padding: .5em;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-    &-content {
-        position: relative;
-    }
+    max-width: 90%;
     &-body {
         position: relative;
         z-index: 1;
+        padding: 0px;
+        font-size: 16px;
+        .form-search {
+            font-size: 1em;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 10;
+            input {
+                padding: 1.2em 3em 1.2em 1.5em;
+                border: none;
+                border-radius: 0px;
+            }
+            button {
+                color: $gray;
+                font-size: 1.2em;
+            }
+        }
+        nav {
+            ul {
+                @include list();
+                li {
+                    &:first-child {
+                        border-top: 1px solid #EDEDED;
+                    }
+                    border-bottom: 1px solid #EDEDED;
+                    a {
+                        display: block;
+                        font-size: 1em;
+                        padding: 1em 2em;
+                        color: $font-color;
+                        font-weight: 800;
+                        &.active {
+                            color: $color-1;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-tabs {
+            position: relative;
+            z-index: 1;
+            border-bottom: none;
+            @include flex();
+            button {
+                width: 50%;
+                background-color: #F6F6F6;
+                border-radius: 0px;
+                border: none;
+                border-bottom: 2px solid transparent;
+                font-size: 1em;
+                padding: 1em 0;
+                color: $font-color;
+                font-weight: 800;
+                text-transform: uppercase;
+                transition: $transition;
+                &.active{
+                    border-bottom: 2px solid $color-1;
+                    background-color: #EDEDED;
+                }
+            }
+        }
+    }
+    .close {
+        left: 102%;
+        right: unset;
     }
 }
