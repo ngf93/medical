@@ -83,7 +83,7 @@ const swiper32 = new Swiper('.swiper-2', {
 
 const swiper4 = new Swiper('.swiper-reviews', {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   centeredSlides: true,
   navigation: {
@@ -91,27 +91,6 @@ const swiper4 = new Swiper('.swiper-reviews', {
     prevEl: ".swiper-button-prev",
   },
   grabCursor: true,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: ["-120%", 0, -500],
-    },
-    next: {
-      shadow: true,
-      translate: ["120%", 0, -500],
-    },
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 35,
-    }
-  }
 });
 
 const swiper5 = new Swiper(".swiper-thumbs", {

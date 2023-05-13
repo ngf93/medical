@@ -15,7 +15,7 @@ $color-3: #99D8F2;
 $color-4: #ECF3F5;
 $color-5: #FFC85F;
 $transition: 300ms ease-in-out;
-$radius: 5px;
+$radius: 6px;
 
 $bp-xxl: 1399.98px;
 $bp-xl: 1199.98px;
@@ -247,12 +247,6 @@ input, textarea {
     @include placeholder(#B4B4B4, 300);
 }
 input{
-    &[type="search"]{
-        background: url(../imgs/icons/search.svg) no-repeat;
-        background-position: calc(100% - 1em) 50%;
-        background-size: 1.1em;
-        padding-right: 2em;
-    }
     &[type='checkbox']{
         @include no-appearance;
         width: 1.1em;
@@ -335,7 +329,7 @@ button {
         }
         &:active {
             color: $bg-color;
-        background: $color-1;
+            background: $color-1;
             box-shadow: inset 0px 3px 2px #AECCD9;
         }
     }
@@ -369,6 +363,20 @@ button {
             color: $bg-color;
             background: $color-1;
             box-shadow: inset 0px 3px 2px #AECCD9;
+        }
+    }
+    &-4 {
+        @extend .btn;
+        border: none;
+        color: $bg-color;
+        background: $color-1;
+        &:hover, &:focus, &.active {
+            color: $bg-color;
+            background-color: $color-2;
+        }
+        &:active {
+            color: $bg-color;
+            background: $color-3;
         }
     }
 }
@@ -423,6 +431,26 @@ button {
                 background: $color-1;
             }
         }
+    }
+}
+
+.form-search {
+    position: relative;
+    font-size: .75em;
+    input {
+        position: relative;
+        z-index: 1;
+        border-radius: 2em;
+        padding-right: 3em;
+    }
+    button {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        z-index: 10;
+        width: 3em;
+        @include flex();
     }
 }
 
@@ -980,108 +1008,132 @@ main {
                 background: linear-gradient(288.82deg, #EAEAEA 3.04%, rgba(234, 234, 234, 0.85) 99%);
                 @include flex(column, flex-end, flex-start, nowrap);
                 padding: 1.5em;
+                background-repeat: no-repeat;
+                h6 {
+                    font-size: 1.15em;
+                    font-weight: 500;
+                    margin-bottom: .5em;
+                }
+                &-1 {
+                    background-image: url(../imgs/plus1.png), linear-gradient(288.82deg, #EAEAEA 3.04%, rgba(234, 234, 234, 0.85) 99%);
+                    background-size: auto , 100% 100%;
+                    background-position: 90% 20%, center;
+                    padding-right: 25%;
+                }
+                &-2 {
+                    background-color: $color-1;
+                    background-image: url(../imgs/plus2.png);
+                    background-size: auto;
+                    background-position: 90% 00%;
+                    padding-right: 25%;
+                    color: $bg-color;
+                }
+                &-3 {
+                    background-image: linear-gradient(68.47deg, #DBFDFF 0.83%, rgba(255, 255, 255, 0.58) 71.12%), url(../imgs/plus3.png);
+                    background-size: cover;
+                    background-position: center;
+                    padding-right: 10%;
+                }
+                &-4 {
+                    background: linear-gradient(258.97deg, #E6FDFF 23.25%, rgba(255, 255, 255, 0.4) 75.09%), url(../imgs/plus4.png);
+                    background-size: cover;
+                    background-position: center;
+                    padding-right: 30%;
+                    padding-bottom: 2.5em;
+                }
+                &-5 {
+                    background: url(../imgs/plus5.png), linear-gradient(97.82deg, #EAEAEA 1.85%, rgba(234, 234, 234, 0.51) 99.5%);
+                    background-size: cover;
+                    background-position: center;
+                    padding-right: 35%;
+                    padding-bottom: 2.5em;
+                }
             }
         }
     }
 }
 
 .sec-5 {
-    background-color: $lightest-gray;
-    padding: 2em 0 10em;
-    @media (max-width: $bp-xxl) {
-        padding: 2em 0 8em;
-    }
-    @media (max-width: $bp-xl) {
-        padding: 2em 0 6em;
-    }
-    @media (max-width: $bp-lg) {
-        padding: 2em 0 4em;
-    }
-    @media (max-width: $bp-sm) {
-        padding: 2em 0;
-    }
     .review {
-        @include flex(column, flex-start, center, nowrap);
-        transition: $transition;
-        img {
-            background-color: $color-1;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 5px solid $bg-color;
-            margin-bottom: -50px;
-            position: relative;
-            z-index: 2;
-            @media (max-width: $bp-md) {
-                width: 70px;
-                height: 70px;
-            }
+        position: relative;
+        background: url(../imgs/bg/circle.svg) no-repeat $bg-color;
+        background-position: 0% 50%;
+        box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.08);
+        // filter: drop-shadow(-4px -4px 20px rgba(0, 0, 0, 0.08));
+        border-radius: $radius*1.5;
+        padding: 2em 2em 2em 35%;
+        height: 260px;
+        @include flex(column, space-between, stretch, nowrap);
+        &::before {
+            content: '';
+            background: url(../imgs/icons/coma.png) no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-35%, -50%);
+            height: 130px;
+            width: 130px;
         }
-        .text {
-            position: relative;
-            z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: -10%;
+            left: 5%;
+            width: 90%;
+            height: 10%;
             background-color: $bg-color;
-            border-radius: $radius;
-            padding: 75px 5em 5em;
-            text-align: center;
-            @media (max-width: $bp-xl) {
-                padding: 75px 4em 4em;
-            }
-            @media (max-width: $bp-lg) {
-                padding: 65px 1em 2em;
-            }
-            h6 {text-align: center;}
-            p {font-size: .875em;}
+            border-radius: 0 0 $radius*1.5 $radius*1.5;
+            box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.08);
         }
     }
     .swiper-reviews {
-        padding-top: 2em;
-        padding-bottom: 4em;
+        position: relative;
+        padding: 2em 0 10em;
         @media (max-width: $bp-sm) {
             padding-top: 0em;
             padding-bottom: 3em;
         }
         .swiper-slide {
+            width: 40%;
             opacity: 0.7;
             transition: $transition;
+            position: relative;
+            z-index: 1;
+            overflow: visible;
             &-active {
+                z-index: 10;
                 opacity: 1;
-                @media (min-width: 576px) {
-                    .review {transform: translateY(-2em);}
-                }
+                transform: translateY(40%) scale(100%);
+            }
+            &-prev {
+                transform: translateX(40%) scale(90%);
+            }
+            &-next {
+                transform: translateX(-40%) scale(90%);
             }
         }
-        .swiper-pagination {
-            bottom: 0px;
-            font-size: 1.35em;
-            color: $color-1;
-            z-index: 10;
-        }
         .swiper-button-prev, .swiper-button-next {
-            top: unset;
-            bottom: 0px;
+            top: 50%;
             font-size: 1em;
-            width: 1.6em;
-            height: 1.6em;
-            border-radius: 50%;
-            background-color: $color-1;
-            color: $bg-color;
             z-index: 20;
             transition: $transition;
             @include flex();
-            &::after {content: unset;}
-            svg {
-                font-size: .8em;
+            &::after {
+                color: $color-1;
             }
             &:hover, &:focus {
-                background-color: darken($color-1, 7%);
+                &::after {
+                    color: $color-2;
+                }
             }
         }
         .swiper-button-prev {
-            left: calc(50% - 5em);
+            left: 0px;
         }
         .swiper-button-next {
-            right: calc(50% - 5em);
+            right: 0px;
         }
     }
 }
@@ -1097,7 +1149,7 @@ main {
         button {
             background-color: $color-1;
             font-size: 1.1em;
-            font-weight: 600;
+            font-weight: 500;
             color: $bg-color;
             width: 100%;
             @include flex(row, space-between, center, nowrap);
@@ -1123,7 +1175,9 @@ main {
             }
         }
         .answer {
-            padding: 1.25em 2.5em;
+            border-top: 1px solid $bg-color;
+            margin-top: 1em;
+            padding: 1.25em .5em;
             @media (max-width: $bp-lg) {
                 padding: 1em 1.5em;
             }
@@ -1253,20 +1307,108 @@ main {
     min-height: inherit;
 }
 
+
 footer {
     height: var(--f-height);
     padding: 3em 0;
     background-color: $font-color;
     color: $bg-color;
     font-size: .875em;
-    @media (max-width: $bp-md) {
-        padding: 2em 0;
+    .footer-grid {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "area1 area1 area1 area1 area1 . area4 area4 area4 area4 area5 area5"
+        "area2 area2 area2 area2 area2 . area4 area4 area4 area4 area7 area7"
+        "area3 area3 area3 area3 area3 . area4 area4 area4 area4 area6 area6";
+        @media (max-width: $bp-xl) {
+            grid-template-areas: 
+            "area1 area1 area1 area1 area1 area4 area4 area4 area4 area5 area5 area5"
+            "area2 area2 area2 area2 area2 area4 area4 area4 area4 . . ."
+            "area3 area3 area3 area3 area3 area4 area4 area4 area4 area6 area6 area6";
+        }
+        @media (max-width: $bp-lg) {
+            grid-template-areas: 
+            "area1 area1 area1 area1 area4 area4 area4 area4 area4 area5 area5 area5"
+            "area2 area2 area2 area2 area4 area4 area4 area4 area4 . . ."
+            "area3 area3 area3 area3 area4 area4 area4 area4 area4 area6 area6 area6";
+        }
+        @media (max-width: $bp-md) {
+            padding: 2em 0;
+            grid-template-columns: 1fr;
+            grid-template-areas: "area1" "area4" "area5" "area3" "area2" "area6";
+            gap: .5em;
+        }
     }
-    @media (max-width: $bp-sm) {
-        padding: 1em 0;
+    
+    .grid-1 {
+        grid-area: area1;
+        @media (max-width: $bp-md) {
+            @include flex(column, flex-start, center, nowrap);
+        }
+    }
+    .grid-2 {
+        grid-area: area2;
+        @media (max-width: $bp-md) {
+            @include flex(row, center, center, nowrap);
+        }
+    }
+    .grid-3 {
+        grid-area: area3;
+        @include flex(column, flex-end, flex-start, nowrap);
+        @media (max-width: $bp-md) {
+            text-align: center;
+        }
+    }
+    .grid-4 {
+        grid-area: area4;
+        @include flex(row, space-evenly, flex-start, nowrap);
+    }
+    .grid-5 {
+        grid-area: area5;
+        @media (max-width: $bp-md) {
+            form {
+                width: 50%;
+                font-size: 1.2em;
+                margin: auto;
+            }
+        }
+    }
+    .grid-6 {
+        grid-area: area6;
+        @include flex(row, flex-end, flex-end, nowrap);
+        @media (max-width: $bp-md) {
+            justify-content: center;
+        }
+    }
+    .grid-7 {
+        grid-area: area7;
+        font-size: 1.5em;
+        .btn-4 {padding: .3em;}
+        @media (max-width: $bp-md) {
+            @include flex(row, center, center, nowrap);
+        }
+    }
+    .phone-link {
+        display: block;
+        background-color: $color-1;
+        color: $bg-color;
+        border-radius: $radius*3;
+        width: fit-content;
+        padding: .5em 2em;
+        font-weight: 500;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            background-color: $color-2;
+        }
     }
     .menu {
         li:not(:first-child){margin-top: .75em;}
+    }
+    .form-search {
+        button {color: $font-color;}
     }
 }
 
