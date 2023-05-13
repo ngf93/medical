@@ -5,21 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css" />
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>Медицинское оборудование и изделия</title>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
+                <button class="d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.80273H20.506" stroke="white" stroke-width="1.9506" stroke-linecap="round"/>
+                        <path d="M1 8.30469H20.506" stroke="white" stroke-width="1.9506" stroke-linecap="round"/>
+                        <path d="M1 14.8066H20.506" stroke="white" stroke-width="1.9506" stroke-linecap="round"/>
+                    </svg>                                  
+                </button>
+                
                 <a href="index.html" class="logo">
                     <img src="imgs/logo.svg" alt="logo">
-                    <hr class="d-none d-sm-block">
-                    <h6 class="mb-0">Медицинское оборудование <br class="d-none d-sm-inline"/>Лизинг, продажа, сервис</h6>
+                    <hr class="d-none d-lg-block">
+                    <h6 class="d-none d-lg-block mb-0">Медицинское оборудование <br class="d-none d-sm-inline"/>Лизинг, продажа, сервис</h6>
                 </a>
 
                 <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasMenu">
@@ -31,90 +39,11 @@
                     <div class="offcanvas-body">
                         <nav>
                             <ul class="list-unstyled d-flex">
-                                <li class="hover-menu">
-                                    <a href="catalog.html">Все печи</a>
-                                    <ul class="sub-menu">
-                                        <li class="hover-submenu">
-                                            <a href="catalog.html">Камины</a>
-                                            <ul class="sub-menu-2">
-                                                <li>
-                                                    <a href="">Серия F</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Серия R</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Куб</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Aplit</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Ферро</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Легго</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Киви</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="">Порталы</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Грили</a>
-                                        </li>
-                                        <li class="hover-submenu">
-                                            <a href="">Топки</a>
-                                            <ul class="sub-menu-2">
-                                                <li>
-                                                    <a href="">Прямое стекло</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Два стекла</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Три стекла</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Туннельная</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Призма</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Авторские</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="hover-submenu">
-                                            <a href="">Аксессуары</a>
-                                            <ul class="sub-menu-2">
-                                                <li>
-                                                    <a href="">Дровники</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Прямые решетки</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Прямые решетки</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Рамки</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Решетки</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Монтаж</a></li>
-                                <li><a href="">Проектирование</a></li>
+                                <li><a href="catalog.html">Каталог</a></li>
+                                <li><a href="">Сервис</a></li>
+                                <li><a href="">Лизинг</a></li>
                                 <li><a href="">Доставка</a></li>
-                                <li><a href="not-found.html">Наши работы</a></li>
+                                <li><a href="">О нас</a></li>
                                 <li><a href="">Контакты</a></li>
                             </ul>
                         </nav>
@@ -122,30 +51,18 @@
                 </div>
                 
                 <div class="d-flex">
-                    <div class="offcanvas-xl offcanvas-top" tabindex="-1" id="offcanvasSearch">
-                        <div class="offcanvas-body">
-                            <form action="" class="form-search">
-                                <input type="search" placeholder="Поиск оборудования">
-                                <button type="submit">
-                                    <svg width="1em" height="1em" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.33333 9.36444C7.72657 9.36444 9.66667 7.49199 9.66667 5.18222C9.66667 2.87244 7.72657 1 5.33333 1C2.9401 1 1 2.87244 1 5.18222C1 7.49199 2.9401 9.36444 5.33333 9.36444Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.7498 10.4108L8.39355 8.13672" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                            
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <button class="btn-3 fs-12 p-2 d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
-                        <img src="imgs/icons/search.svg" alt="">                           
-                    </button>
-                    <a class="btn-cart p-2 ms-2" href="">
+                    <form action="" class="form-search d-none d-xl-block">
+                        <input type="search" placeholder="Поиск оборудования">
+                        <button type="submit">
+                            <svg width="1em" height="1em" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.33333 9.36444C7.72657 9.36444 9.66667 7.49199 9.66667 5.18222C9.66667 2.87244 7.72657 1 5.33333 1C2.9401 1 1 2.87244 1 5.18222C1 7.49199 2.9401 9.36444 5.33333 9.36444Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.7498 10.4108L8.39355 8.13672" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                            
+                        </button>
+                    </form>
+                    <a class="btn-3 p-2 ms-2" href="">
                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                     </a>
-                    <button class="btn-3 fs-12 p-2 d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 5H0V4h16v1zm0 8H0v-1h16v1zm0-4.008H0V8h16v.992z"></path>
-                        </svg>            
-                    </button>
                 </div>
             </div>
         </div>
@@ -155,51 +72,61 @@
         <section class="sec-1 mb-8">
             <div class="container flex-1">
                 <div class="row">
-                    <div class="col-sm-9 col-xxl-7">
+                    <div class="col-12 col-md-8 col-lg-7">
                         <h1>Комплексные поставки
                             <span>Медицинского оборудования
                                 и мед. изделий</span>
                         </h1>
-                        <div class="fw-5 d-flex align-items-center mb-5">
+                        <div class="fw-5 d-flex align-items-center mb-4 mb-sm-5">
                             <span class="fs-15">Доставим</span>
                             <img src="imgs/icons/arrow.svg" alt="arrow" class="icon mx-3">
                             <span class="fs-15">Установим</span>
                             <img src="imgs/icons/arrow.svg" alt="arrow" class="icon mx-3">
                             <span class="fs-15">Обучим</span>
                         </div>
-                        <button class="btn-1 mb-5">
+                        <button class="btn-1 d-none d-md-block mb-4 mb-sm-5">
                             <span class="fs-11">подробнее</span>
                             <img src="imgs/icons/long-arrow-white.svg" alt="arrow" class="icon ms-3">
                         </button>
 
-                        <ul class="list-unstyled d-flex">
-                            <li>
+                        <ul class="list-unstyled d-sm-flex mb-4 mb-sm-5">
+                            <li class="me-5 mb-2 mb-sm-0">
                                 <div class="num">
                                     300<span class="accent">+</span>
                                 </div>
-                                <p class="fs-12">Наименований товаров на складе</p>
+                                <p class="fs-12">Наименований <br/>товаров на складе</p>
                             </li>
-                            <li>
+                            <li class="ps-xl-5">
                                 <div class="num">
                                     15000<span class="accent">+</span>
                                 </div>
-                                <p class="fs-12">Единиц проданного медицинского оборудования</p>
+                                <p class="fs-12">Единиц проданного <br/>медицинского оборудования</p>
                             </li>
                         </ul>
+
+                        <div class="d-flex d-md-none mb-4 mb-sm-5">
+                            <button class="btn-1">
+                                <span class="fs-11">подробнее</span>
+                                <img src="imgs/icons/arrow-white.svg" alt="arrow" class="icon ms-3">
+                            </button>
+                            <button class="btn-5 ms-3">
+                                <span class="fs-11">Каталог</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="bottom py-4">
+            <div class="bottom py-3 py-lg-4">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-9 col-xxl-7">
+                        <div class="col-12 col-md-8 col-lg-7">
                             <ul class="list-unstyled row row-cols-2">
-                                <li class="d-flex align-items-center">
-                                    <img src="imgs/icons/contracts.png" alt="Прямые контракты">
+                                <li class="d-sm-flex align-items-center">
+                                    <img src="imgs/icons/contracts.png" alt="Прямые контракты" class="d-block mx-auto mx-sm-0 mb-2 mb-sm-0">
                                     <p class="fs-09 ms-3">Прямые контракты с производителями - поставки оборудования на оптимальных условиях</p>
                                 </li>
-                                <li class="d-flex align-items-center">
-                                    <img src="imgs/icons/24.png" alt="обслуживание 24/7">
+                                <li class="d-sm-flex align-items-center">
+                                    <img src="imgs/icons/24.png" alt="обслуживание 24/7" class="d-block mx-auto mx-sm-0 mb-2 mb-sm-0">
                                     <p class="fs-09 ms-3">Принимаем ваши заявки и проводим обслуживание 24/7.</p>
                                 </li>
                             </ul>
@@ -207,15 +134,16 @@
                     </div>
                 </div>
             </div>
-            <div class="links">
-                <a href="" class="link-1">
+            <div class="links d-none d-md-flex">
+                <a href="" class="link-1 d-none d-lg-flex">
                     <img src="imgs/img1.png" alt="">
                     <img src="imgs/icons/arrow.svg" alt="arrow" class="icon-08">
                 </a>
                 <a href="" class="link-2">
-                    Каталог <br/>товаров
+                    <span class="me-3">Каталог <br/>товаров</span>
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M184 112l144 144-144 144"></path></svg>
                 </a>
-                <a href="" class="link-3">
+                <a href="" class="link-3 d-none d-lg-flex">
                     <img src="imgs/img2.png" alt="">
                     <img src="imgs/icons/arrow-white.svg" alt="arrow" class="icon-08">
                 </a>
@@ -267,35 +195,41 @@
 
         <section class="sec-3 mb-8">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-center mb-5">
-                    <h2 class="mb-0">Каталог</h2>
+                <div class="d-xl-flex justify-content-between align-items-center mb-5">
+                    <h2 class="mb-xl-0">Каталог</h2>
                     <ul class="list-unstyled d-flex">
-                        <li>
-                            <button class="btn-2">ХИРУРГИЯ</button>
+                        <li class="d-none d-md-block">
+                            <button class="btn-2 h-100">ХИРУРГИЯ</button>
                         </li>
-                        <li class="ms-3">
-                            <button class="btn-2">КОСМЕТОЛОГИЯ</button>
+                        <li class="d-none d-md-block ms-3">
+                            <button class="btn-2 h-100">КОСМЕТОЛОГИЯ</button>
                         </li>
-                        <li class="ms-3">
-                            <button class="btn-2 active">МЕБЕЛЬ</button>
+                        <li class=" ms-md-3">
+                            <button class="btn-2 h-100 active">МЕБЕЛЬ</button>
                         </li>
-                        <li class="ms-3">
-                            <a href="" class="btn-2">
-                                ВСЕ РАЗДЕЛЫ
+                        <li class="d-md-none ms-1 ms-sm-3">
+                            <button class="btn-2 h-100">ИНСТРУМЕНТЫ</button>
+                        </li>
+                        <li class="ms-1 ms-sm-3">
+                            <a href="" class="btn-2 d-flex align-items-center">
+                                <span class="lh-9 me-1 me-md-3">ВСЕ РАЗДЕЛЫ</span>
+                                <svg width=".5em" height="1.1em" viewBox="0 0 7 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L6 8.89744L1 16" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>                                    
                             </a>
                         </li>
                     </ul>
                 </div>
                 
-                <ul class="list-unstyled row row-cols-4 g-4 mb-5">
+                <ul class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center g-4 mb-5">
                     <li>
                         <figure class="product">
                             <a href="product.html"><img class="img" src="imgs/img4.png" alt="Автоматическая система перекатывания пациента"></a>
                             <figcaption>
                                 <h6>Автоматическая система перекатывания пациента</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -309,8 +243,8 @@
                             <figcaption>
                                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -324,8 +258,8 @@
                             <figcaption>
                                 <h6>Автоматическая система перекатывания пациента</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -339,8 +273,8 @@
                             <figcaption>
                                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -354,8 +288,8 @@
                             <figcaption>
                                 <h6>Автоматическая система перекатывания пациента</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -369,8 +303,8 @@
                             <figcaption>
                                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -384,8 +318,8 @@
                             <figcaption>
                                 <h6>Автоматическая система перекатывания пациента</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -399,8 +333,8 @@
                             <figcaption>
                                 <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
                                 <div class="d-flex">
-                                    <button type="button" class="btn-3 flex-1 fs-09 py-3">подробнее</button>
-                                    <button type="button" class="btn-3 p-3 ms-3">
+                                    <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
+                                    <button type="button" class="btn-3 ms-3">
                                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                                     </button>
                                 </div>
@@ -410,8 +344,8 @@
                     </li>
                 </ul>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
+                <div class="d-flex justify-content-center justify-content-md-between align-items-center">
+                    <div class="d-none d-md-flex align-items-center">
                         <img src="imgs/icons/truck.png" alt="доставка" class="icon me-3">
                         <p class="gray">Доступна доставка транспортной <br/>компанией в любой регион страны</p>
                     </div>
@@ -422,32 +356,32 @@
 
         <section class="container sec-4 mb-8">
             <h2>Почему <br/>выбирают&nbsp;нас</h2>
-            <ul class="list-unstyled row g-4">
-                <li class="col-4">
+            <ul class="list-unstyled row justify-content-center g-4">
+                <li class="col-12 col-sm-6 col-lg-4">
                     <div class="card card-1">
                         <h6>Более 16 лет на рынке</h6>
                         <p>Профессиональный подход на каждом этапе.</p>
                     </div>
                 </li>
-                <li class="col-4">
+                <li class="col-12 col-sm-6 col-lg-4">
                     <div class="card card-2">
                         <h6>Широкий ассортимент</h6>
                         <p>У нас вы найдете оборудование для любой медицинской отрасли.</p>
                     </div>
                 </li>
-                <li class="col-4">
+                <li class="col-12 col-sm-6 col-lg-4">
                     <div class="card card-3">
                         <h6>90% продукции есть на складе</h6>
                         <p>В нашем складском комплексе размещен почти весь предлагаемый ассортимент.</p>
                     </div>
                 </li>
-                <li class="col-6">
+                <li class="col-12 col-sm-6">
                     <div class="card card-4">
                         <h6>Работаем без посредников</h6>
                         <p>Вы получите лучшую цену на медицинское оборудование и инструменты.</p>
                     </div>
                 </li>
-                <li class="col-6">
+                <li class="col-12 col-sm-6">
                     <div class="card card-5">
                         <h6>Гарантийное обслуживание</h6>
                         <p>Наш сервисный центр решит любую вашу проблему в кратчайшие сроки.</p>
@@ -462,6 +396,34 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="review">
+                                <div class="ms-md-auto text-center text-md-end">
+                                    <p>Покупка оборудования</p>
+                                    <time>01.01.2023</time>
+                                </div>
+
+                                <div>
+                                    <p class="text-center text-md-start fw-6 mb-3">Иван Иванович</p>
+                                    <p class="text-center text-md-start">Этот отзыв не оставит вас равнодушным</p>
+                                </div>
+
+                                <div class="ms-md-auto d-flex flex-md-column justify-content-end align-items-end">
+                                    <button type="button" class="gray mb-md-4 me-4 me-md-0">
+                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path>
+                                        </svg>
+                                    </button>
+                                    <div class="star-rating">
+                                        <img src="imgs/icons/star.svg" alt="star">
+                                        <img src="imgs/icons/star.svg" alt="star">
+                                        <img src="imgs/icons/star.svg" alt="star">
+                                        <img src="imgs/icons/star.svg" alt="star">
+                                        <img src="imgs/icons/star.svg" alt="star">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
                                 <div class="ms-auto text-end">
                                     <p>Покупка оборудования</p>
                                     <time>01.01.2023</time>
@@ -472,7 +434,7 @@
                                     <p>Этот отзыв не оставит вас равнодушным</p>
                                 </div>
 
-                                <button type="button" class=" ms-auto">
+                                <button type="button" class="gray ms-auto">
                                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path>
                                     </svg>
@@ -488,50 +450,110 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="imgs/client.jpg" alt="client">
-                                <div class="text">
-                                    <h6>Какая-то <br/>Анастасия</h6>
-                                    <p>Печь просто огонь, купила семье снеговиков в подарок, они поплыли от счастья.</p>
+                                <div class="ms-auto text-end">
+                                    <p>Покупка оборудования</p>
+                                    <time>01.01.2023</time>
+                                </div>
+
+                                <div>
+                                    <p class="name">Иван Иванович</p>
+                                    <p>Этот отзыв не оставит вас равнодушным</p>
+                                </div>
+
+                                <button type="button" class="gray ms-auto">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path>
+                                    </svg>
+                                </button>
+                                <div class="star-rating ms-auto">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="imgs/client.jpg" alt="client">
-                                <div class="text">
-                                    <h6>Какая-то <br/>Анастасия</h6>
-                                    <p>Печь просто огонь, купила семье снеговиков в подарок, они поплыли от счастья.</p>
+                                <div class="ms-auto text-end">
+                                    <p>Покупка оборудования</p>
+                                    <time>01.01.2023</time>
+                                </div>
+
+                                <div>
+                                    <p class="name">Иван Иванович</p>
+                                    <p>Этот отзыв не оставит вас равнодушным</p>
+                                </div>
+
+                                <button type="button" class="gray ms-auto">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path>
+                                    </svg>
+                                </button>
+                                <div class="star-rating ms-auto">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="imgs/client.jpg" alt="client">
-                                <div class="text">
-                                    <h6>Какая-то <br/>Анастасия</h6>
-                                    <p>Печь просто огонь, купила семье снеговиков в подарок, они поплыли от счастья.</p>
+                                <div class="ms-auto text-end">
+                                    <p>Покупка оборудования</p>
+                                    <time>01.01.2023</time>
+                                </div>
+
+                                <div>
+                                    <p class="name">Иван Иванович</p>
+                                    <p>Этот отзыв не оставит вас равнодушным</p>
+                                </div>
+
+                                <button type="button" class="gray ms-auto">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path>
+                                    </svg>
+                                </button>
+                                <div class="star-rating ms-auto">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="imgs/client.jpg" alt="client">
-                                <div class="text">
-                                    <h6>Какая-то <br/>Анастасия</h6>
-                                    <p>Печь просто огонь, купила семье снеговиков в подарок, они поплыли от счастья.</p>
+                                <div class="ms-auto text-end">
+                                    <p>Покупка оборудования</p>
+                                    <time>01.01.2023</time>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="review">
-                                <img src="imgs/client.jpg" alt="client">
-                                <div class="text">
-                                    <h6>Какая-то <br/>Анастасия</h6>
-                                    <p>Печь просто огонь, купила семье снеговиков в подарок, они поплыли от счастья.</p>
+
+                                <div>
+                                    <p class="name">Иван Иванович</p>
+                                    <p>Этот отзыв не оставит вас равнодушным</p>
+                                </div>
+
+                                <button type="button" class="gray ms-auto">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path>
+                                    </svg>
+                                </button>
+                                <div class="star-rating ms-auto">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
+                                    <img src="imgs/icons/star.svg" alt="star">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination d-md-none"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
@@ -539,16 +561,8 @@
         </section>
 
         <section class="sec-6 container mb-8">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div>
-                    <h2>отвечаем на частые вопросы:</h2>
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 align-items-end">
-                <div>
-                    <h4>не нашли ответ <br/>на свой вопрос?</h4>
-                    <button type="button" class="btn-1 mb-4">СВЯЗАТЬСЯ С НАМИ</button>
-                </div>
+            <h2 class="text-center text-md-start">отвечаем на <br/>частые вопросы:</h2>
+            <div class="row flex-md-row-reverse row-cols-1 row-cols-md-2 align-items-end">
                 <div>
                     <div class="question mb-4">
                         <button type="button" data-bs-toggle="collapse" data-bs-target="#question-1" aria-expanded="false">
@@ -599,6 +613,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="mt-5 mt-md-0">
+                    <h4 class="text-center text-md-start">не нашли ответ <br/>на свой вопрос?</h4>
+                    <button type="button" class="btn-1 mx-auto mx-md-0 mb-md-4">СВЯЗАТЬСЯ С НАМИ</button>
+                </div>
             </div>
         </section>
     </main>
@@ -625,7 +643,7 @@
                     <ul class="list-unstyled menu">
                         <li><a href="catalog.html">Хирургия</a></li>
                         <li><a href="catalog.html">Мебель</a></li>
-                        <li><a href="catalog.html">Медицинские инструменты</a></li>
+                        <li><a href="catalog.html">Медицинские <br/>инструменты</a></li>
                         <li><a href="catalog.html">Косметология</a></li>
                         <li><a href="catalog.html">Все категории...</a></li>
                     </ul>

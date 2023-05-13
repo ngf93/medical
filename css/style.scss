@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
 $gradient: linear-gradient(91.23deg, #EFC3A3 0%, #F8D9C3 100.15%);
 $bg-color: #ffffff;
 $font-color: #484E57;
@@ -28,9 +27,10 @@ $bp-sm: 575.98px;
     --f-height: 300px;
     @media (max-width: $bp-lg) {
         --h-height: 70px;
+        --f-height: 250px;
     }
     @media (max-width: $bp-md) {
-        --f-height: 470px;
+        --f-height: 400px;
     }
     @media (max-width: $bp-sm) {
         --h-height: 50px;
@@ -115,17 +115,14 @@ h1 {
     text-transform: uppercase;
     line-height: 100%;
     margin-bottom: 1em;
-    @media (max-width: $bp-xl) {
-        font-size: 2.5em;
-    }
-    @media (max-width: $bp-lg) {
-        font-size: 2em;
-    }
-    @media (max-width: $bp-md) {
+    @media (max-width: $bp-xxl) {
         font-size: 1.5em;
     }
-    @media (max-width: $bp-sm) {
+    @media (max-width: $bp-xl) {
         font-size: 1.25em;
+    }
+    @media (max-width: $bp-sm) {
+        font-size: 1em;
     }
 }
 h2 {
@@ -230,9 +227,11 @@ h6 {
     &-8 {font-weight: 800;}
     &-9 {font-weight: 900;}
 }
+.font-color {color: $font-color;}
 .accent {color: $color-1;}
 .gray {color: $gray;}
 .red {color: $color-5;}
+.lh-9 {line-height: 90%;}
 
 /* Form elements */
 input, textarea {
@@ -316,6 +315,10 @@ button {
     text-transform: uppercase;
     font-weight: 600;
     border-radius: $radius;
+    line-height: 90%;
+    @media (max-width: $bp-xxl) {
+        padding: 1.2em 2em;
+    }
     &-1 {
         @extend .btn;
         border: none;
@@ -377,6 +380,23 @@ button {
         &:active {
             color: $bg-color;
             background: $color-3;
+        }
+    }
+    &-5 {
+        @extend .btn;
+        border: none;
+        color: $font-color;
+        background: $color-5;
+        box-shadow: 0px 3px 2px #AECCD9;
+        &:hover, &:focus, &.active {
+            color: $bg-color;
+            background-color: $color-2;
+            box-shadow: none;
+        }
+        &:active {
+            color: $bg-color;
+            background: $color-1;
+            box-shadow: inset 0px 3px 2px #AECCD9;
         }
     }
 }
@@ -457,14 +477,8 @@ button {
 .flex-1 {flex: 1;}
 .mb-8 {
     margin-bottom: 8em;
-    @media (max-width: $bp-lg) {
-        margin-bottom: 6em;
-    }
-    @media (max-width: $bp-md) {
-        margin-bottom: 5em;
-    }
     @media (max-width: $bp-sm) {
-        margin-bottom: 4em;
+        margin-bottom: 5em;
     }
 }
 @media (max-width: $bp-sm) {
@@ -520,7 +534,7 @@ body {
     font-size: 16px;
     font-family: 'Inter';
     font-weight: 400;
-    @media (max-width: $bp-sm) {
+    @media (max-width: $bp-lg) {
         font-size: 14px;
     }
 }
@@ -540,119 +554,20 @@ header {
             }
             li {
                 &:not(:first-child){
-                    margin-left: 1.5em;
-                    @media (max-width: $bp-xxl) {
-                        margin-left: 1em;
-                    }
-                    @media (max-width: $bp-lg) {
-                        margin-left: 0px;
-                    }
+                    margin-left: 2.25em;
                 }
                 a {
-                    padding: 1em 0;
                     display: block;
                     color: $bg-color;
                     font-size: .875em;
                     transition: $transition;
+                    border-bottom: 1px solid transparent;
                     @media (max-width: $bp-lg) {
                         padding: .5em;
                     }
                     &:hover, &:focus, &:active, &.active {
                         color: $bg-color;
-                    }
-                }
-                &.hover-menu {
-                    position: relative;
-                    display: block;
-                    transition: $transition;
-                    .sub-menu {
-                        @include list();
-                        position: absolute;
-                        z-index: 1;
-                        top: 100%;
-                        left: -2em;
-                        width: fit-content;
-                        display: none;
-                        background-color: $lightest-gray;
-                        color: $gray;
-                        @media (max-width: $bp-lg) {
-                            position: relative;
-                            left: 0px;
-                            display: block;
-                            background-color: transparent;
-                            margin-left: 1em;
-                            width: calc(100% - 1em);
-                        }
-                        li {
-                            margin-left: 0px;
-                            a {
-                                display: block;
-                                padding: .85em 2em;
-                                width: 100%;
-                                @media (max-width: $bp-lg) {
-                                    padding: .5em 1.5em;
-                                }
-                                &:hover, &:focus {
-                                    background-color: $color-1;
-                                    color: $bg-color;
-                                    @media (max-width: $bp-lg) {
-                                        background-color: transparent;
-                                        color: $color-1;
-                                    }
-                                }
-                            }
-                            &.hover-submenu {
-                                position: relative;
-                                display: block;
-                                transition: $transition;
-                                .sub-menu-2 {
-                                    @include list();
-                                    position: absolute;
-                                    z-index: 1;
-                                    top: 0%;
-                                    left: 100%;
-                                    width: max-content;
-                                    min-width: 150px;
-                                    display: none;
-                                    background-color: $color-3;
-                                    color: $gray;
-                                    @media (max-width: $bp-lg) {
-                                        position: relative;
-                                        left: 0px;
-                                        display: block;
-                                        background-color: transparent;
-                                        margin-left: 2em;
-                                        width: calc(100% - 2em);
-                                    }
-                                    &::before {
-                                        content: '';
-                                        position: absolute;
-                                        top: 1em;
-                                        right: 100%;
-                                        border-right: 4.5px solid $color-3;
-                                        border-top: 4.5px solid transparent;
-                                        border-bottom: 4.5px solid transparent;
-                                        @media (max-width: $bp-lg) {
-                                            content: unset;
-                                        }
-                                    }
-                                }
-                                &:hover, &:focus {
-                                    &>a {
-                                        background-color: $color-1;
-                                        color: $bg-color;
-                                        @media (max-width: $bp-lg) {
-                                            background-color: transparent;
-                                            color: $color-1;
-                                        }
-                                    }
-                                    .sub-menu-2 {display: block;}
-                                }
-                            }
-                        }
-                    }
-                    &:hover, &:focus {
-                        .sub-menu {display: block;}
+                        border-color: $bg-color;
                     }
                 }
             }
@@ -665,8 +580,7 @@ header {
         background-color: rgba($bg-color, .2);
         @include placeholder($bg-color, 300);
     }
-    .btn-cart {
-        background-color: $bg-color;
+    .btn-3 {
         width: 2.2em;
         height: 2.2em;
         border-radius: 50%;
@@ -674,6 +588,9 @@ header {
             width: 1.2em;
             height: 1.2em;
             object-fit: contain;
+        }
+        @media (max-width: $bp-lg) {
+            font-size: 14px;
         }
     }
 }
@@ -686,6 +603,12 @@ header {
         max-width: 120px;
         @media (max-width: $bp-xl) {
             max-width: 100px;
+        }
+        @media (max-width: $bp-lg) {
+            max-height: 35px;
+        }
+        @media (max-width: $bp-sm) {
+            max-height: 25px;
         }
     }
     hr {
@@ -714,28 +637,29 @@ main {
     background-image: url(../imgs/bg/background1.jpg);
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: contain;
-    background-color: $bg-color;
+    background-size: cover;
+    background-color: rgba($bg-color, .5);
     @include flex(column, flex-start, stretch, nowrap);
-    @media (max-width: $bp-xxl) {
-        height: 600px;
-    }
     @media (max-width: $bp-xl) {
-        height: 520px;
+        padding: 3em 0 0;
+        height: 780px;
     }
     @media (max-width: $bp-lg) {
-        padding-top: 0px;
+        height: fit-content;
+        background-position: left center;
+    }
+    @media (max-width: $bp-md) {
+        .fs-15 {font-size: 1.2em;}
     }
     @media (max-width: $bp-sm) {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../imgs/bg1.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 370px;
+        font-size: 10px;
     }
     .icon {
         height: 1em;
         width: auto;
+        @media (max-width: $bp-md) {
+            height: .5em;
+        }
     }
     h1 {
         span {
@@ -746,6 +670,9 @@ main {
     .num {
         font-size: 4.8em;
         font-weight: 800;
+        @media (max-width: $bp-xl) {
+            font-size: 4em;
+        }
     }
     .bottom {
         background-color: $font-color;
@@ -757,6 +684,13 @@ main {
         right: 0px;
         width: 44%;
         @include flex(row, flex-end, stretch, wrap);
+        box-shadow: -4px -4px 26px rgba(0, 0, 0, 0.07);
+        border-radius: $radius 0 0 0;
+        overflow: hidden;
+        @include safariFix();
+        @media (max-width: $bp-lg) {
+            width: fit-content;
+        }
         img {
             max-width: 100%;
             max-height: 100%;
@@ -776,6 +710,9 @@ main {
             @include flex();
             background-color: $bg-color;
             position: relative;
+            @media (max-width: $bp-xxl) {
+                height: 180px;
+            }
             .icon-08 {
                 right: 1em;
             }
@@ -789,6 +726,10 @@ main {
             font-weight: 600;
             text-align: center;
             text-transform: uppercase;
+            @media (max-width: $bp-lg) {
+                height: 220px;
+                width: 280px;
+            }
         }
         .link-3 {
             position: relative;
@@ -796,6 +737,9 @@ main {
             width: 100%;
             @include flex();
             background-color: $color-1;
+            @media (max-width: $bp-xxl) {
+                height: 240px;
+            }
             .icon-08 {
                 left: 1em;
             }
@@ -826,6 +770,7 @@ main {
         }
         @media (max-width: $bp-sm) {
             height: 250px;
+            border-radius: $radius;
         }
         img {
             @include absBG(0);
@@ -846,13 +791,10 @@ main {
                 }
             }
             @media (max-width: $bp-lg) {
-                padding: 3em 3em 3em 40%;
+                padding: 2em 4em;
             }
             @media (max-width: $bp-md) {
-                padding: 2em 2em 2em 40%;
-            }
-            @media (max-width: $bp-sm) {
-                padding: 2em 2em 2em 3em;
+                padding: 2em 3em;
             }
         }
     }
@@ -860,22 +802,22 @@ main {
         position: relative;
         overflow: visible;
         padding-bottom: 2.5em;
-        .swiper-pagination {
-            position: absolute;
-            bottom: 0px;
-            &-bullet {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $light-gray;
-                transition: $transition;
-                opacity: 1;
-                margin: 0px;
-                &:not(:first-child){margin-left: 25px;}
-                &-active {
-                    background-color: $color-3;
-                }
-            }
+    }
+}
+.swiper-pagination {
+    position: absolute;
+    bottom: 0px;
+    &-bullet {
+        width: .625em;
+        height: .625em;
+        border-radius: 50%;
+        background-color: $light-gray;
+        transition: $transition;
+        opacity: 1;
+        margin: 0px !important;
+        &:not(:first-child){margin-left: 25px !important;}
+        &-active {
+            background-color: $color-3;
         }
     }
 }
@@ -885,6 +827,12 @@ main {
         background-color: $color-1;
         border-radius: $radius;
         padding: .25em;
+    }
+    @media (max-width: $bp-sm) {
+        .btn-2 {
+            font-size: 10px;
+            padding: .7em 1em;
+        }
     }
 }
 .swiper-3, .swiper-2 {
@@ -938,6 +886,9 @@ main {
         padding: 1em;
         h6 {
             @include clamp(2, 1.2em, true);
+        }
+        button {
+            padding: 1em;
         }
     }
     .mark {
@@ -1005,10 +956,12 @@ main {
                 border: none;
                 width: 100%;
                 height: 240px;
-                background: linear-gradient(288.82deg, #EAEAEA 3.04%, rgba(234, 234, 234, 0.85) 99%);
                 @include flex(column, flex-end, flex-start, nowrap);
                 padding: 1.5em;
                 background-repeat: no-repeat;
+                @media (max-width: $bp-lg) {
+                    height: 220px;
+                }
                 h6 {
                     font-size: 1.15em;
                     font-weight: 500;
@@ -1018,35 +971,48 @@ main {
                     background-image: url(../imgs/plus1.png), linear-gradient(288.82deg, #EAEAEA 3.04%, rgba(234, 234, 234, 0.85) 99%);
                     background-size: auto , 100% 100%;
                     background-position: 90% 20%, center;
-                    padding-right: 25%;
+                    @media (min-width: 1200px) {
+                        padding-right: 25%;
+                    }
                 }
                 &-2 {
                     background-color: $color-1;
                     background-image: url(../imgs/plus2.png);
                     background-size: auto;
                     background-position: 90% 00%;
-                    padding-right: 25%;
                     color: $bg-color;
+                    @media (min-width: 1200px) {
+                        padding-right: 25%;
+                    }
                 }
                 &-3 {
                     background-image: linear-gradient(68.47deg, #DBFDFF 0.83%, rgba(255, 255, 255, 0.58) 71.12%), url(../imgs/plus3.png);
                     background-size: cover;
                     background-position: center;
-                    padding-right: 10%;
+                    @media (min-width: 1200px) {
+                        padding-right: 10%;
+                    }
                 }
                 &-4 {
                     background: linear-gradient(258.97deg, #E6FDFF 23.25%, rgba(255, 255, 255, 0.4) 75.09%), url(../imgs/plus4.png);
                     background-size: cover;
                     background-position: center;
-                    padding-right: 30%;
                     padding-bottom: 2.5em;
+                    @media (min-width: 1200px) {
+                        padding-right: 30%;
+                    }
                 }
                 &-5 {
                     background: url(../imgs/plus5.png), linear-gradient(97.82deg, #EAEAEA 1.85%, rgba(234, 234, 234, 0.51) 99.5%);
                     background-size: cover;
-                    background-position: center;
-                    padding-right: 35%;
+                    background-position: right center;
                     padding-bottom: 2.5em;
+                    @media (min-width: 992px) {
+                        padding-right: 35%;
+                    }
+                    @media (max-width: $bp-lg) {
+                        background-blend-mode: overlay;
+                    }
                 }
             }
         }
@@ -1057,13 +1023,33 @@ main {
     .review {
         position: relative;
         background: url(../imgs/bg/circle.svg) no-repeat $bg-color;
-        background-position: 0% 50%;
+        background-position: -45% 50%;
+        background-size: auto;
         box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.08);
         // filter: drop-shadow(-4px -4px 20px rgba(0, 0, 0, 0.08));
         border-radius: $radius*1.5;
         padding: 2em 2em 2em 35%;
-        height: 260px;
+        height: 265px;
         @include flex(column, space-between, stretch, nowrap);
+        font-size: .8em;
+        @media (max-width: $bp-xxl) {
+            background-position: -60% 50%;
+        }
+        @media (max-width: $bp-lg) {
+            height: 210px;
+            background-position: -70% 50%;
+            background-size: auto 101%;
+        }
+        @media (max-width: $bp-md) {
+            height: 430px;
+            background-position: 50% -150px;
+            background-size: 65% auto;
+            padding: 35% 2em 4em 2em;
+            align-items: center;
+        }
+        @media (max-width: $bp-sm) {
+            height: 400px;
+        }
         &::before {
             content: '';
             background: url(../imgs/icons/coma.png) no-repeat;
@@ -1074,6 +1060,11 @@ main {
             transform: translate(-35%, -50%);
             height: 130px;
             width: 130px;
+            @media (max-width: $bp-md) {
+                top: 0px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
         &::after {
             content: '';
@@ -1086,42 +1077,56 @@ main {
             background-color: $bg-color;
             border-radius: 0 0 $radius*1.5 $radius*1.5;
             box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.08);
+            @media (max-width: $bp-md) {
+                content: unset;
+            }
         }
     }
     .swiper-reviews {
         position: relative;
-        padding: 2em 0 10em;
-        @media (max-width: $bp-sm) {
-            padding-top: 0em;
-            padding-bottom: 3em;
+        padding: 6em 0 4em;
+        @media (max-width: $bp-lg) {
+            padding: 8em 0 4em;
+        }
+        @media (max-width: $bp-md) {
+            padding: 6em 0 1em;
         }
         .swiper-slide {
-            width: 40%;
-            opacity: 0.7;
+            width: 43%;
             transition: $transition;
             position: relative;
             z-index: 1;
             overflow: visible;
+            @media (max-width: $bp-xl) {
+                width: 50%;
+            }
+            @media (max-width: $bp-md) {
+                width: 100%;
+                padding: 0 4em;
+            }
+            @media (max-width: $bp-sm) {
+                padding: 0;
+            }
             &-active {
                 z-index: 10;
-                opacity: 1;
-                transform: translateY(40%) scale(100%);
             }
-            &-prev {
-                transform: translateX(40%) scale(90%);
-            }
-            &-next {
-                transform: translateX(-40%) scale(90%);
-            }
+        }
+        .swiper-pagination {
+            bottom: 2em !important;
         }
         .swiper-button-prev, .swiper-button-next {
             top: 50%;
-            font-size: 1em;
             z-index: 20;
             transition: $transition;
             @include flex();
+            @media (max-width: $bp-md) {
+                display: none;
+            }
             &::after {
                 color: $color-1;
+                font-size: 1em;
+                font-size: 1.5em;
+                font-weight: 700;
             }
             &:hover, &:focus {
                 &::after {
@@ -1314,6 +1319,9 @@ footer {
     background-color: $font-color;
     color: $bg-color;
     font-size: .875em;
+    @media (max-width: $bp-md) {
+        padding: 2em 0;
+    }
     .footer-grid {
         height: 100%;
         display: grid;
@@ -1326,19 +1334,18 @@ footer {
         @media (max-width: $bp-xl) {
             grid-template-areas: 
             "area1 area1 area1 area1 area1 area4 area4 area4 area4 area5 area5 area5"
-            "area2 area2 area2 area2 area2 area4 area4 area4 area4 . . ."
+            "area2 area2 area2 area2 area2 area4 area4 area4 area4 area7 area7 area7"
             "area3 area3 area3 area3 area3 area4 area4 area4 area4 area6 area6 area6";
         }
         @media (max-width: $bp-lg) {
             grid-template-areas: 
             "area1 area1 area1 area1 area4 area4 area4 area4 area4 area5 area5 area5"
-            "area2 area2 area2 area2 area4 area4 area4 area4 area4 . . ."
+            "area2 area2 area2 area2 area4 area4 area4 area4 area4 area7 area7 area7"
             "area3 area3 area3 area3 area4 area4 area4 area4 area4 area6 area6 area6";
         }
         @media (max-width: $bp-md) {
-            padding: 2em 0;
             grid-template-columns: 1fr;
-            grid-template-areas: "area1" "area4" "area5" "area3" "area2" "area6";
+            grid-template-areas: "area1" "area5" "area4" "area2" "area7" "area6";
             gap: .5em;
         }
     }
@@ -1360,6 +1367,7 @@ footer {
         @include flex(column, flex-end, flex-start, nowrap);
         @media (max-width: $bp-md) {
             text-align: center;
+            display: none;
         }
     }
     .grid-4 {

@@ -83,14 +83,45 @@ const swiper32 = new Swiper('.swiper-2', {
 
 const swiper4 = new Swiper('.swiper-reviews', {
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
+  effect: 'creative',
+  creativeEffect: {
+    prev: {
+      translate: ["100%", 0, 0],
+      scale: 0.8,
+    },
+    next: {
+      translate: ["-100%", 0, 0],
+      scale: 0.8,
+    },
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   grabCursor: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      creativeEffect: {
+        prev: {
+          translate: ["50%", "-40%", 0],
+          scale: 0.8,
+        },
+        next: {
+          translate: ["-50%", "-40%", 0],
+          scale: 0.8,
+        },
+      },
+    }
+  }
 });
 
 const swiper5 = new Swiper(".swiper-thumbs", {
