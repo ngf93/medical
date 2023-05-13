@@ -844,6 +844,10 @@ header nav ul {
       flex-wrap: nowrap;
 }
 
+header nav ul li {
+  padding: 1em 0;
+}
+
 header nav ul li:not(:first-child) {
   margin-left: 2.25em;
 }
@@ -866,6 +870,70 @@ header nav ul li a {
 header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active, header nav ul li a.active {
   color: #ffffff;
   border-color: #ffffff;
+}
+
+header nav ul li.hover-li {
+  position: relative;
+}
+
+header nav ul li.hover-li ul.hover-menu {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 450px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: none;
+}
+
+header nav ul li.hover-li ul.hover-menu::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 1em;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #ffffff;
+}
+
+header nav ul li.hover-li ul.hover-menu li {
+  width: calc(100% / 3);
+  margin: 0px;
+  padding: .25em;
+}
+
+header nav ul li.hover-li ul.hover-menu li a {
+  color: #484E57;
+  font-size: .75em;
+  font-weight: 300;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+header nav ul li.hover-li ul.hover-menu li a:hover, header nav ul li.hover-li ul.hover-menu li a:focus {
+  color: #4BD3DC;
+}
+
+header nav ul li.hover-li:hover ul.hover-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 header input[type="search"] {
