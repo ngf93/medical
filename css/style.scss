@@ -163,7 +163,7 @@ h2 {
         font-size: 1.5em;
     }
 }
-h3 {
+h3, .h3 {
     font-size: 2.8em;
     text-align: left;
     font-weight: 700;
@@ -638,6 +638,7 @@ button {
 .breadcrumb {
     color: $gray;
     font-size: .75em;
+    margin-bottom: 2em;
     .breadcrumb-item+.breadcrumb-item::before {
         content: '-';
     }
@@ -752,9 +753,6 @@ header {
 }
 .logo {
     @include flex(row, flex-start, center, nowrap);
-    @media (max-width: $bp-sm) {
-        @include flex(column, center, flex-start, nowrap);
-    }
     img {
         max-width: 120px;
         @media (max-width: $bp-xl) {
@@ -989,26 +987,6 @@ main {
         .btn-2 {
             font-size: 10px;
             padding: .7em 1em;
-        }
-    }
-}
-.swiper-3, .swiper-2 {
-    position: unset;
-    .swiper-button-prev, .swiper-button-next {
-        &::after {content: none;}
-        font-size: 1.5em;
-        color: $color-1;
-    }
-    .swiper-button-prev {
-        left: -1.5em;
-        @media (max-width: $bp-xl) {
-            left: 0px;
-        }
-    }
-    .swiper-button-next {
-        right: -1.5em;
-        @media (max-width: $bp-xl) {
-            right: 0px;
         }
     }
 }
@@ -1393,7 +1371,7 @@ main {
     }
 }
 
-.sec-10 {
+.sec-8 {
     .swiper-photo {
         img {
             width: 100%;
@@ -1405,7 +1383,10 @@ main {
                 height: 350px;
             }
             @media (max-width: $bp-lg) {
-                height: 500px;
+                height: 260px;
+            }
+            @media (max-width: $bp-md) {
+                height: 460px;
             }
             @media (max-width: $bp-sm) {
                 height: 90vw;
@@ -1416,6 +1397,7 @@ main {
             @include flex();
             width: 2.5em;
             height: 2.5em;
+            border-radius: 50%;
             background-color: $bg-color;
             color: $color-1;
             svg {
@@ -1436,10 +1418,13 @@ main {
                 height: 80px;
             }
             @media (max-width: $bp-lg) {
-                height: 120px;
+                height: 60px;
+            }
+            @media (max-width: $bp-md) {
+                height: 100px;
             }
             @media (max-width: $bp-sm) {
-                height: 28vw;
+                height: 27vw;
             }
         }
     }
@@ -1483,33 +1468,204 @@ main {
             }
         }
     }
-    .specification {
-        @include flex(row, flex-start, stretch, wrap);
+    .construction-list {
+        @include list();
+        @include flex(row, flex-start, flex-start, wrap);
         li {
-            width: calc(100% / 3);
-            border: 1px solid $gray;
-            padding: 1.5em 2em;
-            @include flex(row, space-between, center, nowrap);
-            margin-left: -1px;
-            margin-bottom: -1px;
-            div:nth-child(2){margin-left: .5em;}
-            @media (max-width: $bp-lg) {
-                width: 50%;
-            }
+            color: $color-1;
+            font-size: .9em;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 2.5px solid $color-1;
+            background-color: $bg-color;
+            border-radius: $radius*5;
+            padding: 1.3em 2em;
+            margin-bottom: 1em;
             @media (max-width: $bp-md) {
+                font-size: .7em;
                 padding: 1em 1.5em;
             }
-            @media (max-width: $bp-sm) {
-                width: 100%;
+            &:not(:last-child) {margin-right: 1em;}
+            &.active {
+                color: $bg-color;
+                border: 2.5px solid $color-1;
+                background-color: $color-1;
             }
         }
+    }
+    .specification {
+        height: 100%;
+        border: 1px solid #000;
+        border-radius: $radius;
+        padding: 1em;
+        @include flex(row, flex-start, stretch, nowrap);
+        font-weight: 600;
+        font-size: .9em;
+        text-transform: uppercase;
+        color: $dark-gray;
+        @media (max-width: $bp-lg) {
+            padding: .75em;
+        }
+        @media (max-width: $bp-sm) {
+            font-size: .75em;
+            padding: .75em .25em;
+        }
+        div {
+            padding: .5em 1em;
+            @media (max-width: $bp-lg) {
+                padding: .5em .75em;
+            }
+            &:nth-child(1) {
+                width: 60%;
+            }
+            &:nth-child(2) {
+                width: 40%;
+                border-left: 1px solid #000;
+                @media (min-width: 992px) {
+                    padding-left: 2em;
+                }
+            }
+        }
+    }
+}
+
+.sec-9 {
+    @media (max-width: $bp-xl) and (min-width: $bp-md) {
+        .product {
+            font-size: .9em;
+        }
+    }
+}
+.swiper-3 {
+    position: unset;
+    padding: 1em 0;
+    .swiper-button-prev, .swiper-button-next {
+        &::after {content: none;}
+        font-size: 1.5em;
+        color: $color-1;
+    }
+    .swiper-button-prev {
+        left: -1.5em;
+        @media (max-width: $bp-xl) {
+            left: 0px;
+        }
+    }
+    .swiper-button-next {
+        right: -1.5em;
+        @media (max-width: $bp-xl) {
+            right: 0px;
+        }
+    }
+}
+
+.sec-12 {
+    color: #575757;
+}
+.cart-list {
+    @include list();
+    li {
+        &.top {
+            text-transform: uppercase;
+            @media (max-width: $bp-md) {
+                display: none;
+            }
+        }
+        &:not(:first-child){margin-top: 1em;}
+        display: grid;
+        grid-template-columns: 45px auto 120px 130px;
+        grid-template-rows: 1fr;
+        gap: 1em;
+        grid-template-areas: "img title price quantity";
+        padding: .75em 0;
+        font-size: .875em;
+        font-weight: 600;
+        border-bottom: 1px solid #6B6B6B;
+        @media (max-width: $bp-lg) {
+            grid-template-columns: 45px auto 100px 130px;
+        }
+        @media (max-width: $bp-md) {
+            grid-template-columns: 45px calc(50% - 45px) 1fr;
+            grid-template-rows: auto 30px;
+            grid-template-areas: 
+            "img title title"
+            "quantity quantity price";
+        }
+        &>div {
+            @include flex(column, center, flex-start, nowrap);
+        }
+        .img {
+            grid-area: img;
+            img {
+                width: 45px;
+                height: 45px;
+                object-fit: contain;
+                border: 1px solid #6B6B6B;
+                padding: .1em;
+            }
+        }
+        .title {
+            grid-area: title;
+        }
+        .price {
+            grid-area: price;
+            @media (max-width: $bp-md) {
+                align-items: flex-end;
+            }
+        }
+        .quantity {
+            grid-area: quantity;
+            align-items: center;
+            &-group {
+                @include flex();
+                button {padding: .5em;}
+                input {
+                    @include no-appearance();
+                    width: 40px;
+                    padding: .5em 0px;
+                    border: none;
+                    text-align: center;
+                    &::-webkit-outer-spin-button, 
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    &-noimg {
+        @extend .cart-list;
+        li {
+            grid-template-columns: auto 100px 70px;
+            grid-template-areas: "title price quantity";
+            @media (max-width: $bp-lg) {
+                grid-template-columns: auto 100px 70px;
+            }
+            @media (max-width: $bp-md) {
+                grid-template-columns: auto 100px;
+                grid-template-rows: auto 20px;
+                grid-template-areas: 
+                "title title"
+                "quantity price";
+            }
+        }
+    }
+}
+.product-list {
+    @include list();
+    font-size: .875em;
+    font-weight: 600;
+    li {
+        padding: .75em .25em;
+        border-bottom: 1px solid #6B6B6B;
+        @include flex(row, space-between, center, nowrap);
+        div:last-child {margin-left: .5em;}
     }
 }
 
 .sec-404 {
     min-height: inherit;
 }
-
 
 footer {
     height: var(--f-height);
@@ -1576,7 +1732,7 @@ footer {
         grid-area: area5;
         @media (max-width: $bp-md) {
             form {
-                width: 50%;
+                width: 70%;
                 font-size: 1.2em;
                 margin: auto;
             }

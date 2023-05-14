@@ -53,30 +53,7 @@ const swiper3 = new Swiper('.swiper-3', {
     },
     1200: {
       slidesPerView: 3,
-      spaceBetween: 45,
-    }
-  }
-});
-const swiper32 = new Swiper('.swiper-2', {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
       spaceBetween: 20,
-    },
-    992: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    1200: {
-      slidesPerView: 2,
-      spaceBetween: 45,
     }
   }
 });
