@@ -418,6 +418,20 @@ button {
             box-shadow: inset 0px 3px 2px #AECCD9;
         }
     }
+    &-6 {
+        @extend .btn;
+        border: 2px solid $color-1;
+        color: $color-1;
+        background: $bg-color;
+        &:hover, &:focus, &.active {
+            color: $bg-color;
+            background-color: $color-2;
+        }
+        &:active {
+            color: $bg-color;
+            background: $color-3;
+        }
+    }
 }
 
 .slider-range {
@@ -1558,7 +1572,7 @@ main {
     }
 }
 
-.sec-12 {
+.sec-10 {
     color: #575757;
 }
 .cart-list {

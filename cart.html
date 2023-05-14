@@ -118,7 +118,7 @@
                             </svg>                            
                         </button>
                     </form>
-                    <a class="btn-3 p-2 ms-2" href="cart.html">
+                    <a class="btn-3 p-2 ms-2" href="cart-empty.html">
                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                     </a>
                 </div>
@@ -127,221 +127,48 @@
     </header>
 
     <main>
-        <section class="sec-8 container pt-4 pt-sm-5 mb-8">
-            <div class="row gx-4 mb-5">
-                <div class="col-12 col-md-5 col-xl-6 pe-xxl-5 mb-4 mb-sm-5 mb-md-0">
-                    <div class="swiper swiper-photo mb-4">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="imgs/img5.png" alt="">
+        <section class="sec-10 py-5 container">
+            <h1 class="text-center">Корзина</h1>
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-10 col-xxl-8">
+                    <ul class="cart-list">
+                        <li class="top">
+                            <div class="title">товар</div>
+                            <div class="price">Цена</div>
+                            <div class="quantity">количество</div>
+                        </li>
+                        <li>
+                            <div class="img"><img src="imgs/img5.png" alt="Автоматическая система перекатЫвания пац...   "></div>
+                            <div class="title">Автоматическая система перекатЫвания пац...   </div>
+                            <div class="price">28 000 р.</div>
+                            <div class="quantity">
+                                <div class="quantity-group">
+                                    <button type="button">-</button>
+                                    <input type="number" placeholder="0" value="1">
+                                    <button type="button" class="accent">+</button>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="imgs/img5.png" alt="">
+                        </li>
+                        <li>
+                            <div class="img"><img src="imgs/img5.png" alt="Автоматическая система перекатЫвания пац...   "></div>
+                            <div class="title">Автоматическая система перекатЫвания пац...   </div>
+                            <div class="price">28 000 р.</div>
+                            <div class="quantity">
+                                <div class="quantity-group">
+                                    <button type="button">-</button>
+                                    <input type="number" placeholder="0" value="1">
+                                    <button type="button" class="accent">+</button>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="imgs/img5.png" alt="">
-                            </div>
+                        </li>
+                    </ul>
+                    <h5 class="text-end fw-6 mt-3">итого: 395 000 р.</h5>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-12 col-md-6 col-lg-4 mb-3 mb-md-0">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#quick-order" class="btn-6 px-4 w-100">заказать в 1 клик</button>
                         </div>
-                        <div class="swiper-button-prev">
-                            <svg width="1em" height="1em" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.5 1L2 11.5L12.5 22" stroke="currentColor" stroke-width="2"/>
-                            </svg> 
-                        </div>
-                        <div class="swiper-button-next">
-                            <svg width="1em" height="1em" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L11.5 11.5L1 22" stroke="currentColor" stroke-width="2"/>
-                            </svg> 
-                        </div>
-                    </div>
-                    <div class="swiper swiper-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="imgs/img5.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="imgs/img5.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="imgs/img5.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-7 col-xl-6 d-flex flex-column justify-content-between">
-                    <div>
-                        <h1 class="h3">КРЕСЛО ГЕРИАТРИЧЕСКОЕ MET CARE-XL</h1>
-                        <nav>
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                                <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-                                <li class="breadcrumb-item"><a href="category.html">Мебель</a></li>
-                                <li class="breadcrumb-item"><a href="category.html">Каталки</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">КРЕСЛО ГЕРИАТРИЧЕСКОЕ MET CARE-XL</li>
-                            </ol>
-                        </nav>
-                        <p class="fw-5 mb-5">Комфортное кресло с глубокой посадкой. Подходит для пациентов с избыточным весом</p>
-                    </div>
-                    <div>
-                        <h4>СТОИМОСТЬ:</h4>
-                        <div class="fs-15 fw-6 mb-3">32 000 руб.</div>
-                        <div class="row row-cols-sm-2">
-                            <div>
-                                <button data-bs-toggle="modal" data-bs-target="#quick-order" type="button" class="btn-1 fs-875 w-100 mb-3 mb-sm-0">Заказать</button>
-                            </div>
-                            <div>
-                                <button type="button" class="btn-5 fs-875 w-100">В корзину</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h3>Конструктивные <br/>особенности</h3>
-            <ul class="construction-list mb-5">
-                <li class="active">Ручки для сопровождающих</li>
-                <li>Центральная тормозная система</li>
-                <li class="active">Обивка сиденья из мягкой эко кожи</li>
-                <li>Корзина для хранения вещей (ОПция)</li>
-                <li class="active">Съемный столик (опция)</li>
-            </ul>
-            <h3>Характеристики</h3>
-            <ul class="list-unstyled row row-cols-1 row-cols-md-2 g-2 g-sm-3 mb-5">
-                <li>
-                    <div class="specification">
-                        <div>глубина сиденья см</div>
-                        <div>44</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="specification">
-                        <div>Регулировка спинной секции</div>
-                        <div>механическая</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="specification">
-                        <div>ширина сиденья см</div>
-                        <div>66</div>
-                    </div>
-                </li>
-                <li>
-                    <div class="specification">
-                        <div>Регулировка высоты</div>
-                        <div>нет</div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <section class="sec-9 container mb-8">
-            <div class="row">
-                <div class="col-12 col-md-4 col-lg-3">
-                    <h3>ПОХОЖИЕ ТОВАРЫ</h3>
-                </div>
-                <div class="col-12 col-md-8 col-lg-9">
-                    <div class="position-relative ms-xl-5">
-                        <div class="swiper swiper-3">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <figure class="product">
-                                        <a href="product.html"><img class="img" src="imgs/img4.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit."></a>
-                                        <figcaption>
-                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
-                                            <div class="d-flex">
-                                                <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
-                                                <button type="button" class="btn-3 ms-3">
-                                                    <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
-                                                </button>
-                                            </div>
-                                            <div class="mark">НОВИНКА</div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="swiper-slide">
-                                    <figure class="product">
-                                        <a href="product.html"><img class="img" src="imgs/img4.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit."></a>
-                                        <figcaption>
-                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
-                                            <div class="d-flex">
-                                                <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
-                                                <button type="button" class="btn-3 ms-3">
-                                                    <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
-                                                </button>
-                                            </div>
-                                            <div class="mark">НОВИНКА</div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="swiper-slide">
-                                    <figure class="product">
-                                        <a href="product.html"><img class="img" src="imgs/img4.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit."></a>
-                                        <figcaption>
-                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
-                                            <div class="d-flex">
-                                                <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
-                                                <button type="button" class="btn-3 ms-3">
-                                                    <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
-                                                </button>
-                                            </div>
-                                            <div class="mark">НОВИНКА</div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="swiper-slide">
-                                    <figure class="product">
-                                        <a href="product.html"><img class="img" src="imgs/img4.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit."></a>
-                                        <figcaption>
-                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
-                                            <div class="d-flex">
-                                                <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
-                                                <button type="button" class="btn-3 ms-3">
-                                                    <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
-                                                </button>
-                                            </div>
-                                            <div class="mark">НОВИНКА</div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="swiper-slide">
-                                    <figure class="product">
-                                        <a href="product.html"><img class="img" src="imgs/img4.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit."></a>
-                                        <figcaption>
-                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
-                                            <div class="d-flex">
-                                                <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
-                                                <button type="button" class="btn-3 ms-3">
-                                                    <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
-                                                </button>
-                                            </div>
-                                            <div class="mark">НОВИНКА</div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="swiper-slide">
-                                    <figure class="product">
-                                        <a href="product.html"><img class="img" src="imgs/img4.png" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit."></a>
-                                        <figcaption>
-                                            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem earum molestias reiciendis, hic nesciunt.</h6>
-                                            <div class="d-flex">
-                                                <button type="button" class="btn-3 flex-1 fs-09">подробнее</button>
-                                                <button type="button" class="btn-3 ms-3">
-                                                    <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
-                                                </button>
-                                            </div>
-                                            <div class="mark">НОВИНКА</div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="swiper-button-prev">
-                                <svg width="1em" height="1em" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.5 1L2 11.5L12.5 22" stroke="currentColor" stroke-width="2"/>
-                                </svg>                                    
-                            </div>
-                            <div class="swiper-button-next">
-                                <svg width="1em" height="1em" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L11.5 11.5L1 22" stroke="currentColor" stroke-width="2"/>
-                                </svg>                             
-                            </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <a href="checkout.html" class="btn-1 px-4 h-100 w-100">Перейти к оформлению</a>
                         </div>
                     </div>
                 </div>

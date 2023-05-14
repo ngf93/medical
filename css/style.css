@@ -471,7 +471,7 @@ button {
   color: inherit;
 }
 
-.btn, .btn-1, .btn-2, .btn-3, .btn-4, .btn-5 {
+.btn, .btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,7 +501,7 @@ button {
 }
 
 @media (max-width: 1399.98px) {
-  .btn, .btn-1, .btn-2, .btn-3, .btn-4, .btn-5 {
+  .btn, .btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6 {
     padding: 1.2em 2em;
   }
 }
@@ -604,6 +604,22 @@ button {
   background: #4BD3DC;
   -webkit-box-shadow: inset 0px 3px 2px #AECCD9;
           box-shadow: inset 0px 3px 2px #AECCD9;
+}
+
+.btn-6 {
+  border: 2px solid #4BD3DC;
+  color: #4BD3DC;
+  background: #ffffff;
+}
+
+.btn-6:hover, .btn-6:focus, .btn-6.active {
+  color: #ffffff;
+  background-color: #00DFED;
+}
+
+.btn-6:active {
+  color: #ffffff;
+  background: #99D8F2;
 }
 
 .slider-range {
@@ -2549,7 +2565,7 @@ main {
   }
 }
 
-.sec-12 {
+.sec-10 {
   color: #575757;
 }
 
