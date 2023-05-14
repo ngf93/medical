@@ -1682,7 +1682,7 @@ main {
 }
 
 .sec-11 {
-    padding-top: 7em;
+    padding-top: 6em;
     @media (max-width: $bp-md) {
         padding-top: 4em;
     }
@@ -1851,6 +1851,57 @@ main {
         @media (max-width: $bp-lg) {
             margin-bottom: 1em;
         }
+    }
+    .service-img {
+        background: url(../imgs/bg/service-bg.png) no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 450px;
+        @include flex();
+        @media (max-width: $bp-md) {
+            background: unset;
+            height: unset;
+        }
+        img {
+            max-height: 360px;
+            max-width: 80%;
+            object-fit: scale-down;
+            @media (max-width: $bp-md) {
+                max-height: unset;
+                max-width: 90%;
+            }
+        }
+    }
+    .box {
+        padding: 2em;
+        background: $bg-color;
+        box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.09);
+        border-radius: $radius*2;
+        @media (max-width: $bp-xl) {
+            padding: 1.5em;
+        }
+        .title {
+            @include flex(row, flex-start, center, nowrap);
+            background: url(../imgs/bg/circle.svg) no-repeat;
+            background-position: left center;
+            background-size: 4.3em;
+            padding-left: 1.75em;
+            margin-bottom: 1em;
+            .num {
+                color: $bg-color;
+                font-weight: 700;
+                font-size: 5.4em;
+            }
+            h4 {
+                margin-bottom: 0px;
+                margin-left: 1em;
+                flex: 1;
+                @media (min-width: $bp-xl) {
+                    font-size: 1.75em;
+                }
+            }
+        }
+        blockquote, ol {margin-bottom: 1em;}
     }
 }
 

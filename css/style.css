@@ -2782,7 +2782,7 @@ main {
 }
 
 .sec-11 {
-  padding-top: 7em;
+  padding-top: 6em;
 }
 
 @media (max-width: 767.98px) {
@@ -3086,6 +3086,110 @@ main {
   .sec-11 .mb-minus1 {
     margin-bottom: 1em;
   }
+}
+
+.sec-11 .service-img {
+  background: url(../imgs/bg/service-bg.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .sec-11 .service-img {
+    background: unset;
+    height: unset;
+  }
+}
+
+.sec-11 .service-img img {
+  max-height: 360px;
+  max-width: 80%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+@media (max-width: 767.98px) {
+  .sec-11 .service-img img {
+    max-height: unset;
+    max-width: 90%;
+  }
+}
+
+.sec-11 .box {
+  padding: 2em;
+  background: #ffffff;
+  -webkit-box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.09);
+          box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.09);
+  border-radius: 12px;
+}
+
+@media (max-width: 1199.98px) {
+  .sec-11 .box {
+    padding: 1.5em;
+  }
+}
+
+.sec-11 .box .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background: url(../imgs/bg/circle.svg) no-repeat;
+  background-position: left center;
+  background-size: 4.3em;
+  padding-left: 1.75em;
+  margin-bottom: 1em;
+}
+
+.sec-11 .box .title .num {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 5.4em;
+}
+
+.sec-11 .box .title h4 {
+  margin-bottom: 0px;
+  margin-left: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media (min-width: 1199.98px) {
+  .sec-11 .box .title h4 {
+    font-size: 1.75em;
+  }
+}
+
+.sec-11 .box blockquote, .sec-11 .box ol {
+  margin-bottom: 1em;
 }
 
 .sec-404 {
