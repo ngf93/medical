@@ -118,7 +118,7 @@
                             </svg>                            
                         </button>
                     </form>
-                    <a class="btn-3 p-2 ms-2" href="cart-empty.html">
+                    <a class="btn-3 p-2 ms-2" href="cart.html">
                         <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
                     </a>
                 </div>
@@ -127,43 +127,49 @@
     </header>
 
     <main>
-        <section class="sec-10 py-5 container">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-6 col-xl-5">
-                    <h1>оформление заказа</h1>
-                    <ul class="cart-list-noimg">
-                        <li class="top">
-                            <div class="title">товар</div>
-                            <div class="price">Цена</div>
-                            <div class="quantity">кол-во</div>
+        <section class="sec-11 container mb-8">
+            <img src="imgs/map.jpg" alt="map" class="img-fluid d-block d-lg-none mb-5">
+            <div class="row mb-8">
+                <div class="col-12 col-md-5 mb-5">
+                    <h1 class="inner">Контакты</h1>
+                    <ul>
+                        <li>
+                            <div class="fw-7">email:</div>
+                            <div class="fw-5"><a href="mailto:@mail.ru">@mail.ru</a></div>
                         </li>
                         <li>
-                            <div class="title">Автоматическая система перекатЫвания пациента</div>
-                            <div class="price">10 000 р.</div>
-                            <div class="quantity">
-                                1
-                            </div>
+                            <div class="fw-7">Телефон:</div>
+                            <div class="fw-5"><a href="tel:+7 XXX xxx XX xx">+7 XXX xxx XX xx</a></div>
                         </li>
                         <li>
-                            <div class="title">КОМПЛЕКС ДЛЯ КОРРЕКЦИИ ФИГУРЫ CELLISS</div>
-                            <div class="price">10 000 р.</div>
-                            <div class="quantity">
-                                2
-                            </div>
+                            <div class="fw-7">АДрес:</div>
+                            <div class="fw-5"><address>Дом, город</address></div>
+                        </li>
+                        <li>
+                            <div class="fw-7">Время работы:</div>
+                            <div class="fw-5">Пн/ПТ 9:00 - 18:00</div>
                         </li>
                     </ul>
-                    <h5 class="text-start fw-6 mt-3">итого: 20 000 р.</h5>
                 </div>
-                <div class="col-12 col-lg-6 col-xl-5 mt-4 mt-lg-0">
+                <div class="col-12 col-md-7">
+                    <img src="imgs/bg/contacts.png" alt="Контакты" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mb-8">
+                <div class="d-none d-lg-block col-12 col-lg-6 col-xxl-7">
+                    <img src="imgs/map.jpg" alt="map" class="img-fluid d-block">
+                </div>
+                <div class="col-12 col-lg-6 col-xxl-5 mt-4 mt-lg-0">
                     <form action="">
+                        <h3 class="mb-4 mb-md-5">Связаться с нами:</h3>
                         <h5 class="fw-7 text-uppercase mb-2">Ваше имя*</h5>
                         <input class="mb-4" type="text" placeholder="иван иванов">
                         <h5 class="fw-7 text-uppercase mb-2">Ваш телефон*</h5>
                         <input class="mb-4" type="tel" placeholder="+7 XXX XXX XX XX">
-                        <h5 class="fw-7 text-uppercase mb-2">Ваш email</h5>
-                        <input class="mb-4" type="email" placeholder="@mail.ru">
+                        <h5 class="fw-7 text-uppercase mb-2">Задайте вопрос</h5>
+                        <textarea class="mb-4" rows="5" placeholder="Введите сообщение"></textarea>
                         <div class="d-flex flex-column flex-sm-row-reverse">
-                            <button type="submit" class="w-xs-100 btn-1 ms-sm-3 mb-3 mb-sm-0">Заказать</button>
+                            <button type="submit" class="w-xs-100 btn-1 ms-sm-3 mb-3 mb-sm-0">Отправить</button>
                             <p class="gray fs-07">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
                         </div>
                     </form>
@@ -386,45 +392,6 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="quick-order" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <svg stroke="currentColor" fill="none" stroke-width="4" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-                <div class="modal-body">
-                    <form action="">
-                        <h3 class="mb-md-0">Быстрый заказ</h3>
-                        <h6 class="text-uppercase fs-875 fw-7 mb-4 mb-md-5">детали по телефону</h6>
-                        <h5 class="fw-7 text-uppercase mb-2">Ваше имя*</h5>
-                        <input class="mb-4" type="text" placeholder="иван иванов">
-                        <h5 class="fw-7 text-uppercase mb-2">Ваш телефон*</h5>
-                        <input class="mb-4" type="tel" placeholder="+7 XXX XXX XX XX">
-
-                        <ul class="product-list mb-4 mb-sm-5">
-                            <li>
-                                <div>товар</div>
-                                <div>5 000 р.</div>
-                            </li>
-                            <li>
-                                <div>Товар</div>
-                                <div>15 000 р.</div>
-                            </li>
-                        </ul>
-                        
-                        <div class="d-flex flex-column flex-sm-row-reverse">
-                            <button type="submit" class="w-xs-100 btn-1 ms-sm-3 mb-3 mb-sm-0">Заказать</button>
-                            <p class="gray fs-07">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

@@ -122,8 +122,11 @@ h1 {
     line-height: 100%;
     margin-bottom: 1em;
     &.inner {
-        font-size: 4em;
+        font-size: 5em;
         font-weight: 700;
+        @media (max-width: $bp-xxl) {
+            font-size: 4em;
+        }
         @media (max-width: $bp-lg) {
             font-size: 3em;
         }
@@ -606,7 +609,7 @@ button {
 .mb-8 {
     margin-bottom: 8em;
     @media (max-width: $bp-sm) {
-        margin-bottom: 5em;
+        margin-bottom: 4em;
     }
 }
 @media (max-width: $bp-sm) {
@@ -1674,6 +1677,36 @@ main {
         border-bottom: 1px solid #6B6B6B;
         @include flex(row, space-between, center, nowrap);
         div:last-child {margin-left: .5em;}
+    }
+}
+
+.sec-11 {
+    padding-top: 7em;
+    @media (max-width: $bp-md) {
+        padding-top: 4em;
+    }
+    ul {
+        @include list();
+        font-size: 1.35em;
+        text-transform: uppercase;
+        border-left: 4px solid $color-1;
+        padding-left: 1em;
+        li {
+            &:not(:first-child){
+                margin-top: 1em;
+            }
+        }
+    }
+    form {
+        @media (max-width: $bp-lg) {
+            background: $bg-color;
+            box-shadow: 0px 0px 7.1347px rgba(0, 0, 0, 0.12);
+            border-radius: $radius;
+            padding: 2em;
+        }
+        @media (max-width: $bp-lg) {
+            padding: 1em;
+        }
     }
 }
 
