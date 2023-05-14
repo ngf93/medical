@@ -1733,7 +1733,7 @@ main {
                     font-size: 2em;
                 }
                 @media (max-width: $bp-md) {
-                    font-size: 1.75em;
+                    font-size: 2.5em;
                 }
             }
             .condition {
@@ -1744,12 +1744,21 @@ main {
                 border-radius: $radius;
                 @include flex(row, flex-start, center, nowrap);
                 padding-right: 1em;
-                @media (max-width: $bp-xl) {
+                @media (max-width: $bp-lg) {
                     height: 200px;
                 }
                 @media (max-width: $bp-md) {
-                    height: 165px;
-                    background-position: -90px 50%;
+                    flex-direction: column;
+                    height: 350px;
+                    background-position: 50% -90px;
+                    background-size: 105% auto;
+                    padding: 0px 1em 1em;
+                    text-align: center;
+                }
+                @media (max-width: $bp-sm) {
+                    height: 115vw;
+                    background-position: 50% -40vw;
+                    padding: 0px 2em 1em;
                 }
                 img {
                     width: 135px;
@@ -1757,21 +1766,26 @@ main {
                     object-fit: scale-down;
                     margin-right: 2em;
                     padding-top: 2em;
-                    @media (max-width: $bp-xl) {
+                    @media (max-width: $bp-lg) {
                         width: 105px;
                         margin-right: 1em;
                     }
                     @media (max-width: $bp-md) {
-                        width: 70px;
+                        width: 150px;
+                        height: 175px;
                         padding: 3.5em 0.5em 2em;
+                        margin-bottom: 1em;
+                        margin-right: 0em;
                     }
                     @media (max-width: $bp-sm) {
-                        margin-right: 2em;
+                        height: 60vw;
+                        padding: 3em 0em 2em;
                     }
                 }
-                h5 {
-                    @media (max-width: $bp-xxl) {
-                        font-size: 1.1em;
+                h5, h4 {
+                    @media (max-width: $bp-md) {
+                        text-align: center;
+                        font-size: 1.5em;
                     }
                 }
             }
