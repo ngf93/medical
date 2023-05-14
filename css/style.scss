@@ -714,7 +714,7 @@ header {
                     background-color: $bg-color;
                     border-radius: $radius;
                     padding: 1.25em;
-                    @include flex(row, flex-start, flex-start, wrap);
+                    @include flex(row, flex-start, center, wrap);
                     display: none;
                     &::before {
                         content: '';
