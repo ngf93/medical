@@ -7,12 +7,11 @@ $dark-gray: #727272;
 $gray: #9C9C9C;
 $light-gray: #D9D9D9;
 $lightest-gray: #F8F8F8;
-
-$color-1: #4BD3DC;
-$color-2: #00DFED;
+$color-1: #017B8A;
+$color-2: #00b3c9;
 $color-3: #99D8F2;
 $color-4: #ECF3F5;
-$color-5: #FFC85F;
+$color-5: #FF974C;
 $color-6: #F6FAFC;
 $transition: 300ms ease-in-out;
 $radius: 6px;
@@ -37,11 +36,10 @@ $bp-sm: 575.98px;
         --f-height: 250px;
     }
     @media (max-width: $bp-md) {
-        --f-height: 400px;
+        --f-height: 430px;
     }
     @media (max-width: $bp-sm) {
         --h-height: 50px;
-        --f-height: 420px;
     }
 }
 
@@ -114,7 +112,7 @@ h1, h2, h3, h4, h5, h6, p, label, span, a, button, form, fieldset, legend, selec
     margin-bottom: 0px;
 }
 
-h1, h2, h3 {color: #4C4C5E;}
+h1, h2, h3, h4, h5, h6 {color: inherit;}
 h1 {
     font-size: 1.75em;
     text-align: left;
@@ -252,6 +250,7 @@ h6 {
 }
 .font-color {color: $font-color;}
 .accent {color: $color-1;}
+.color-3 {color: $color-3;}
 .gray {color: $gray;}
 .red {color: $color-5;}
 .lh-9 {line-height: 90%;}
@@ -382,12 +381,12 @@ button {
         background: $bg-color;
         &:hover, &:focus, &.active {
             color: $bg-color;
-            background-color: $color-2;
+            background-color: $color-3;
             box-shadow: none;
         }
         &:active {
             color: $bg-color;
-            background: $color-1;
+            background: $color-3;
             box-shadow: inset 0px 3px 2px #AECCD9;
         }
     }
@@ -667,6 +666,7 @@ body {
     font-size: 16px;
     font-family: 'Inter';
     font-weight: 400;
+    color: $font-color;
     @media (max-width: $bp-lg) {
         font-size: 14px;
     }
@@ -1079,6 +1079,7 @@ main {
     fieldset {
         margin-bottom: 1em;
         legend {
+            color: $font-color;
             font-size: 1.1em;
             font-weight: 600;
             margin-bottom: .5em;
@@ -1328,8 +1329,14 @@ main {
                 @include flex();
                 transition: $transition;
                 margin-left: .5em;
+                transform: rotate(0deg);
                 @media (max-width: $bp-lg) {
                     font-size: 1em;
+                }
+            }
+            &[aria-expanded="true"] {
+                .punctuation {
+                    transform: rotate(180deg);
                 }
             }
         }
@@ -1793,29 +1800,27 @@ main {
     }
     .brands {
         @include list();
-        @include flex(row, space-between, center, nowrap);
-        @media (max-width: $bp-xl) {
-            @include flex(row, center, center, wrap);
-            li {
-                @media (max-width: $bp-md) {
-                    width: 50%;
-                    margin: 1em 0;
-                    padding: 0 1em;
-                }
+        @include flex(row, center, center, wrap);
+        li {
+            padding: 1em;
+            @media (max-width: $bp-md) {
+                width: 50%;
+                margin: 1em 0;
+                padding: 0 1em;
             }
         }
         img {
-            max-height: 112px;
+            height: 112px;
             filter: saturate(0%) opacity(.5);
             transition: $transition;
             &:hover {
                 filter: saturate(100%) opacity(1);
             }
             @media (max-width: $bp-xxl) {
-                max-height: 100px;
+                height: 100px;
             }
             @media (max-width: $bp-xl) {
-                max-height: 85px;
+                height: 85px;
             }
             @media (max-width: $bp-md) {
                 width: 100%;
@@ -1938,9 +1943,9 @@ footer {
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
-        "area1 area1 area1 area1 area1 . area4 area4 area4 area4 area5 area5"
-        "area2 area2 area2 area2 area2 . area4 area4 area4 area4 area7 area7"
-        "area3 area3 area3 area3 area3 . area4 area4 area4 area4 area6 area6";
+        "area1 area1 area1 area1 . area4 area4 area4 area4 area5 area5 area5"
+        "area2 area2 area2 area2 . area4 area4 area4 area4 area7 area7 area7"
+        "area3 area3 area3 area3 . area4 area4 area4 area4 area6 area6 area6";
         @media (max-width: $bp-xl) {
             grid-template-areas: 
             "area1 area1 area1 area1 area1 area4 area4 area4 area4 area5 area5 area5"
