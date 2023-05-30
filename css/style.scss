@@ -381,12 +381,12 @@ button {
         background: $bg-color;
         &:hover, &:focus, &.active {
             color: $bg-color;
-            background-color: $color-3;
+            background-color: $color-5;
             box-shadow: none;
         }
         &:active {
             color: $bg-color;
-            background: $color-3;
+            background: $color-5;
             box-shadow: inset 0px 3px 2px #AECCD9;
         }
     }
@@ -687,7 +687,10 @@ header {
             li {
                 padding: 1em 0;
                 &:not(:first-child){
-                    margin-left: 2.25em;
+                    margin-left: 1.5em;
+                    @media (max-width: $bp-xxl) {
+                        margin-left: 1em;
+                    }
                 }
                 a {
                     display: block;
@@ -756,14 +759,14 @@ header {
         @include placeholder($bg-color, 300);
     }
     .btn-3 {
-        width: 2.2em;
-        height: 2.2em;
+        // width: 2.2em;
+        // height: 2.2em;
         border-radius: 50%;
-        img {
-            width: 1.2em;
-            height: 1.2em;
-            object-fit: contain;
-        }
+        // img {
+        //     width: 1.2em;
+        //     height: 1.2em;
+        //     object-fit: contain;
+        // }
         @media (max-width: $bp-lg) {
             font-size: 14px;
         }
@@ -772,15 +775,12 @@ header {
 .logo {
     @include flex(row, flex-start, center, nowrap);
     img {
-        max-width: 120px;
-        @media (max-width: $bp-xl) {
-            max-width: 100px;
-        }
+        width: 100px;
         @media (max-width: $bp-lg) {
-            max-height: 35px;
+            height: 35px;
         }
         @media (max-width: $bp-sm) {
-            max-height: 25px;
+            height: 25px;
         }
     }
     hr {
@@ -810,7 +810,7 @@ main {
     background-image: url(../imgs/bg/background1.jpg);
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: auto 100%;
+    background-size: cover;
     background-color: rgba($bg-color, .5);
     @include flex(column, flex-start, stretch, nowrap);
     @media (max-width: $bp-xl) {
@@ -1937,15 +1937,35 @@ footer {
     @media (max-width: $bp-md) {
         padding: 2em 0;
     }
+    .logo {
+        img {
+            width: 150px;
+            @media (max-width: $bp-xl) {
+                width: 120px;
+            }
+            @media (max-width: $bp-lg) {
+                width: auto;
+            }
+            @media (max-width: $bp-sm) {
+                height: 25px;
+            }
+        }
+        h6 {
+            font-size: 14px;
+            @media (max-width: $bp-lg) {
+                font-size: 9px;
+            }
+        }
+    }
     .footer-grid {
         height: 100%;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
         grid-template-areas: 
-        "area1 area1 area1 area1 . area4 area4 area4 area4 area5 area5 area5"
-        "area2 area2 area2 area2 . area4 area4 area4 area4 area7 area7 area7"
-        "area3 area3 area3 area3 . area4 area4 area4 area4 area6 area6 area6";
+        "area1 area1 area1 area1 area1 area4 area4 area4 area4 area5 area5 area5"
+        "area2 area2 area2 area2 area2 area4 area4 area4 area4 area7 area7 area7"
+        "area3 area3 area3 area3 area3 area4 area4 area4 area4 area6 area6 area6";
         @media (max-width: $bp-xl) {
             grid-template-areas: 
             "area1 area1 area1 area1 area1 area4 area4 area4 area4 area5 area5 area5"
@@ -1964,7 +1984,6 @@ footer {
             gap: .5em;
         }
     }
-    
     .grid-1 {
         grid-area: area1;
         @media (max-width: $bp-md) {
